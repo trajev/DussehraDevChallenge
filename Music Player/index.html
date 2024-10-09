@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <main>
+
+    <img src="./songs/logo.jpg" alt="music-icon" class="music-icon" id="musicIcon">
+
+    <h1 id="songTitle"> Song1 </h1>
+    <h4 id="songSinger"> song, singer, singers</h4>
+
+    <div class="time-controls">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progressBar" value="0" />
+      <span id="durationTime">0:00</span>
+    </div>
+
+    <audio id="audioPlayer">
+      <source src="./songs/ye_raate_ye_mausam.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="controls">
+      <i class="ri-skip-left-fill" id="prevIcon"></i>
+      <i class="ri-play-circle-fill" id="playIcon"></i>
+      <i class="ri-skip-right-fill" id="nextIcon"></i>
+    </div>
+
+    <div id="playlistIcon">
+      <p>Playlist</p>
+      <i class="ri-arrow-right-s-fill"></i>
+    </div>
+
+
+    <div id="music-list">
+
+      <div id="songsList">
+
+        <div class="song" id="song">
+          <div>
+            <h3>song name</h3>
+            <h4>artist name</h4>
+          </div>
+          <div id="songPlayIcon">
+            <i class="ri-play-line"></i>
+          </div>
+        </div>
+
+      </div>
+
+        <div id="closeIcon">
+          <i class="ri-close-line"></i>
+        </div>
+
+
+    </div>
+  </main>
+
+
+  <script src="./script.js" ></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+main {
+  width: 60vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: lightcyan;
+  transition: transform 0.3s ease;
+}
+
+#stopwatchTimer {
+  font-size: 60px;
+  font-weight: 600;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+}
+
+#date {
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#menu-btn {
+  padding: 10px;
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 30;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+#menu-div {
+  z-index: 10;
+  width: 30vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: -30vw; /* Initially off-screen to the right */
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth sliding */
+  padding: 15vh 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#menu-div.show {
+  transform: translateX(-30vw); /* Move into view */
+  opacity: 1; /* Fade in */
+}
+
+#menu-div i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+
+#close-btn {
+  font-weight: bold;
+  z-index: 20;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+#close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#menu-div a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+#menu-div a:hover {
+  border-bottom: 2px solid white;
+}
+
+#stopwatchBtn {
+  padding: 10px 35px;
+  background-color: lightgreen;
+  border: none;
+  font-weight: 600;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#stopwatchBtn.active {
+  background-color: crimson;
+}
+
+#stopwatchBtn:hover {
+  transform: scale(1.05);
+}
+
+.swbtns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#resetBtn {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  border: none;
+  background-color: salmon;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#resetBtn:hover {
+  background-color: darksalmon;
+  transform: scale(1.1);
+}

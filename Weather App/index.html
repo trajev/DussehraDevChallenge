@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+
+  <main>
+
+    <div class="searchDiv">
+      <input type="text" id="searchInput" placeholder="Enter your location...">
+      <i class="ri-search-line" id="searchBtn"></i>
+    </div>
+
+    <div class="weatherDetails">
+      <!-- Left Side: City Weather and Forecast -->
+      <div class="cityDetails" id="leftDiv">
+        <div id="displayWeather">
+          <div>
+            <h2 id="cityName">City Name</h2> <!-- Updated for clarity -->
+            <h1 id="temperature">0&deg;C</h1> <!-- Updated for clarity -->
+            <h3 id="weatherType">Weather type</h3> <!-- Weather type -->
+          </div>
+          <img src="https://openweathermap.org/img/wn/11d@2x.png" alt="weather icon" id="weatherImg">
+        </div>
+
+        <div class="forcastDetails">
+          <h3>3 Days Forecast</h3>
+          <div>
+              <div class="dayForcast">
+                  <h3 id="time1">0:00AM</h3>
+                  <img src="https://openweathermap.org/img/wn/11d@2x.png" class="dayForcastTimeImg" id="dayForcastTime1" alt="">
+                  <h3 id="temp1">0&deg;C</h3> <!-- Added id="temp1" -->
+              </div>
+              <div class="dayForcast">
+                  <h3 id="time2">9:00AM</h3>
+                  <img src="https://openweathermap.org/img/wn/11d@2x.png" class="dayForcastTimeImg" id="dayForcastTime2" alt="">
+                  <h3 id="temp2">0&deg;C</h3> <!-- Added id="temp2" -->
+              </div>
+              <div class="dayForcast">
+                  <h3 id="time3">00:00PM</h3>
+                  <img src="https://openweathermap.org/img/wn/11d@2x.png" class="dayForcastTimeImg" id="dayForcastTime3" alt="">
+                  <h3 id="temp3">0&deg;C</h3> <!-- Added id="temp3" -->
+              </div>
+          </div>
+      </div>
+
+      </div>
+
+      <!-- Right Side: Sunrise/Sunset and Weather Conditions -->
+      <div class="cityDetails" id="rightDiv">
+        <!-- Sunrise/Sunset Section -->
+        <h3>Sunrise & Sunset</h3>
+        <div class="sunDiv">
+          <div>
+            <div id="sunriseDiv">
+              <h3 id="sunriseTime">00:00 AM</h3>
+              <img src="./images/sunrise.png" class="sunimage" alt="Sunrise">
+            </div>
+          </div>
+          <div>
+            <div id="sunsetDiv">
+              <h3 id="sunsetTime">00:00 AM</h3>
+              <img src="./images/sunset.png" class="sunimage" alt="Sunset">
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather Condition Section -->
+        <h3>Weather Conditions</h3>
+        <div class="conditionsDiv">
+          <div class="conditionItem">
+            <h4>Humidity</h4>
+            <p id="humidity"><i class="ri-water-percent-line"></i> 00%</p>
+          </div>
+          <div class="conditionItem">
+            <h4>Visibility</h4>
+            <p id="visibility"> <i class="ri-eye-2-line"></i> 0000m</p>
+          </div>
+          <div class="conditionItem">
+            <h4>Windspeed</h4>
+            <p id="windspeed"> <i class="ri-windy-line"></i> 0.00 m/s</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- <script src="./config.js"></script> -->
+  <script src="./script.js"  type="module"></script>
+</body>
+</html>

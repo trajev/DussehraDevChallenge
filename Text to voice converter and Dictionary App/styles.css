@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./bg.png);
+  background-position: center;
+  background-size: contain;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: 60vw;
+  height: 70vh;
+  border-radius: 20px;
+  border: 1px solid #0005;
+  box-shadow: 2px 2px 20px #fff5;
+
+  background-color: #fff3;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+#t2vConverter {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  display: none;
+}
+
+#generateVoiceBtn {
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  /* background: linear-gradient(to left, darkgreen , green ); */
+  color: white;
+
+  background-image: linear-gradient(to right, green 0%, darkgreen 51%,green  100%);
+  background-size: 200% auto;
+  transition: background 0.3s ease;
+
+  font-size: 18px;
+}
+
+#generateVoiceBtn:hover {
+  background-position: right center;
+}
+
+#textInput {
+  width: 100%;
+  height: 40vh;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  padding: 20px;
+}
+
+#textInput:focus {
+  outline: none
+}
+
+#title {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+
+.buttons {
+  width: 100%;
+  text-align: center;
+}
+
+.buttons button {
+  margin: 0px 20px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+
+  background-image: linear-gradient(to right, #C04848 0%, #480048 51%, #C04848 100%);
+  background-size: 200% auto;
+  /* box-shadow: 0 0 20px #eee; */
+
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background-position: right center;
+}
+
+.active {
+  color: white;
+  background: linear-gradient(to left, red, orange ) !important;
+}
+
+#dictDiv {
+  height: 80%;
+  width: 100%;
+  /* background-color: red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  display: none;
+}
+
+
+.searchDiv {
+  width: 85%;
+  display: flex;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: white;
+  /* box-shadow: 2px 2px 10px gray; */
+}
+
+#searchInput {
+  width: 100%;
+  border: none;
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+#searchInput:focus {
+  outline: none;
+}
+
+#wordSearch {
+  width: 20%;
+  font-size: 16px;
+  padding: 8px 30px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+
+  background-image: linear-gradient(to right, green 0%, darkgreen 51%,green  100%);
+  background-size: 200% auto;
+  transition: background 0.3s ease;
+}
+
+#wordSearch:hover {
+  /* background: linear-gradient(to left, green, darkgreen); */
+  /* background-color: #0002; */
+  background-position: right center;
+}
+
+.solDiv {
+  width: 85%;
+  height: 70%;
+  /* background-color: red; */
+  /* border: 2px solid lightsteelblue; */
+  border-radius: 20px;
+  display: none;
+}
+
+.inputs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+#inputSelect{
+  width: 70%;
+  border-radius: 20px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 14px;
+  appearance: none;
+  background-image: url("./dropdown.png") ;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  text-transform: capitalize;
+  background-position-x: calc(100% - 20px) ;
+  background-position-y:  12px;
+}
+#inputSelect:focus{
+  outline: none;
+}
+
+#phonetic{
+  font-size: 18px;
+  color: darkblue;
+  opacity: 0.8;
+}
+.phonetics{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.soundIcon{
+  width: 45px;
+  height: 45px;
+  background-color: cadetblue;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  display: none;
+}
+.soundIcon:hover{
+  background-color: skyblue;
+}
+.soundIcon i{
+  font-size: 20px;
+}
+
+.phonetics :first-child{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#word {
+  text-transform: capitalize;
+  font-size: 28px;
+}
+
+.synonymsDiv{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+}
+.synonymsDiv h6{
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.meaningsDiv{
+  margin: 10px 10px;
+  overflow-y: auto;
+
+}
+#pos{
+  font-weight: bold;
+}
+
+#meaning{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+}
+
+#altSolDiv{
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

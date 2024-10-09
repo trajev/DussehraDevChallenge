@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Calculator</title>
+  <link rel="stylesheet" href="./styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+  <main>
+
+    <div id="screen">
+      <input type="text" id="displayText"  placeholder="Welcome to DigiCalci...!!" value="" readonly></input>
+    </div>
+
+    <div class="keys">
+      <button class="key" id="keyAllClear" onclick=" displayText.value='' ">AC</button>
+      <button class="key" id="keyClear" onclick="displayText.value=displayText.value.toString().slice(0, -1)">DE</button>
+      <button class="key" id="keyPercent" onclick="displayText.value+='%'">%</button>
+      <button class="key" id="keyDivide" onclick="displayText.value+='/'">/</button>
+
+      <button class="key" id="key7" onclick="displayText.value+=7">7</button>
+      <button class="key" id="key8" onclick="displayText.value+=8" >8</button>
+      <button class="key" id="key9" onclick="displayText.value+=9" >9</button>
+      <button class="key" id="keySubtract" onclick="displayText.value+='-'" >-</button>
+
+      <button class="key" id="key4" onclick="displayText.value+=4" >4</button>
+      <button class="key" id="key5" onclick="displayText.value+=5" >5</button>
+      <button class="key" id="key6" onclick="displayText.value+=6" >6</button>
+      <button class="key" id="keyAdd" onclick="displayText.value+='+'" >+</button>
+
+      <button class="key" id="key1" onclick="displayText.value+=1" >1</button>
+      <button class="key" id="key2" onclick="displayText.value+=2" >2</button>
+      <button class="key" id="key3" onclick="displayText.value+=3" >3</button>
+      <button class="key" id="keyMultiply" onclick="displayText.value+='*'" > X </button>
+
+      <button class="key" id="keyDot" onclick="displayText.value+='.'">.</button>
+      <button class="key" id="key0" onclick="displayText.value+=0">0</button>
+      <button class="key" id="keyEquals">=</button>
+    </div>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

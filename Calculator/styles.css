@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  background-color: seashell;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  width: 28vw;
+  border-radius: 20px;
+  background-color: cadetblue;
+  box-shadow: 3px 3px 15px gray;
+  padding: 20px;
+  border: 1px solid gray;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  main{
+    width: 90vw;
+  }
+}
+
+
+#screen{
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+#displayText{
+  text-align: right;
+  font-weight: 500;
+  width: 100%;
+  font-size: 42px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+
+.key{
+  padding: 20px 0;
+  background-color: darkorchid;
+  font-weight: 500;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid cadetblue;
+  color: seashell;
+  transition: all 0.3s ease;
+}
+
+.key:hover{
+  border: 2px solid seashell;
+}
+
+
+.keys{
+  display: grid;
+  gap: 5px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#keyClear, #keyEquals, #keyAllClear{
+  background-color: orangered;
+}
+#keyEquals{
+  grid-column: span 2;
+}
+
+#keyAdd, #keyMultiply, #keySubtract, #keyDivide, #keyPercent, #keyDot{
+  background-color: darkslategray;
+}
+
+#keyMultiply{
+  font-size: 22px;
+}
+
+#displayText::placeholder{
+  font-size: 20px;
+}
+

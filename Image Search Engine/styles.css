@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  margin-top: 11vh;
+  /* height: 100vh; */
+  background-color: #1D1D1D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: none;
+  gap: 20px;
+}
+
+
+.titleDiv {
+  margin: 40px 0px;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-family: "Linden Hill", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.titleDiv h3 {
+  font-style: italic;
+  color: #fff8;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+
+.searchDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchDiv div{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+
+#searchInput{
+  border: none;
+  width: 100%;
+  padding: 18px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#searchInput:focus{
+  outline: none;
+}
+
+#searchBtn{
+  padding: 19px 30px;
+  cursor: pointer;
+  background-color: green;
+  color:white;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+#searchBtn:hover{
+  background-color: darkgreen;
+}
+
+main{
+  margin: 10vh 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.imageDiv{
+  width: 90%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10vh;
+}
+
+#image{
+  width: 26vw;
+  height: 45vh;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+#loadMore{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  :hover{
+    background-color: darkgreen;
+  }
+}
+
+#noElementsFound{
+  width: 100%;
+  text-align: center;
+}

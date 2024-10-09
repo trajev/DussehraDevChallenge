@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000B;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+main{
+
+  width: 60vw;
+  height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  color: lightcyan;
+
+}
+
+#time{
+  font-size: 60px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  font-weight: 600;
+
+}
+
+#date{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+main p{
+  font-weight: 300;
+  text-transform: capitalize;
+  color: cadetblue
+}
+
+
+#menu-btn{
+  padding: 10px;
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  background-color: #fff1;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+#menu-div {
+  z-index: 10;
+  width: 30vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: -30vw;
+  background-color: #0005;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 15vh 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: start;
+}
+
+#menu-div.show {
+  transform: translateX(-30vw);
+  opacity: 1;
+}
+
+
+#menu-div i{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+
+
+#close-btn{
+  font-weight: bold;
+  z-index: 20;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  background-color: #fff2;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+
+#menu-div a{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+#menu-div a:hover{
+  border-bottom: 2px solid white;
+}
