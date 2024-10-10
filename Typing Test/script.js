@@ -31,12 +31,13 @@ let count = 0;
 let timer;
 let timeLimit = 30;
 let timeElapsed = 0;
-let currentLevel = "Easy";
+let currentLevel = "easy";
 
 
 
 document.querySelector("#testType").addEventListener("change", () => {
   currentLevel = document.querySelector("#testType").value;
+  document.querySelector("#time").innerText = (currentLevel==="easy") ? "00:30" : ( (currentLevel==="medium") ? "00:45" : "01:00" )
   getParagraph();
 
 })
@@ -106,6 +107,7 @@ function startTest() {
   document.querySelector("#textInput").value = "";
 
   timeLimit = currentLevel === 'easy' ? 30 : currentLevel === 'medium' ? 45 : 60;
+  document.querySelector("#testType").style.display = "none";
   startTimer();
 }
 
@@ -116,6 +118,7 @@ function endTest() {
   document.querySelector("#changeParaBtn").style.display = "none";
   document.querySelector("#startBtn").style.display = "none";
   document.querySelector("#restartBtn").style.display = "block";
+  document.querySelector("#testType").style.display = "none";
   clearInterval(timer);
   calculateMetrics();
   showResult();
@@ -158,7 +161,7 @@ function formatTime(seconds) {
 }
 
 document.querySelector("#restartBtn").addEventListener("click", () => {
-  location.reload(); 
+  location.reload();
 });
 
 document.querySelector("#levelSelect").addEventListener("change", (e) => {
