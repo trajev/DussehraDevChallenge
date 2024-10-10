@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Typing Test App </title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+  <h1 class="title">Typing Test App</h1>
+
+  <main>
+
+    <p id="result">You completed the Typing Test with 100% Accuracy and 80WPM</p>
+
+    <div class="paraDisplayDiv" id="paraDisplayDiv"></div>
+
+    <div id="test">
+      <div class="timer">
+        <p>Timer: </p>
+        <p id="time">00:00</p>
+      </div>
+      <textarea name="" id="textInput" placeholder="Start typing the above paragraph" disabled></textarea>
+    </div>
+
+    <div class="buttons">
+      <select id="testType">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button class="btn" id="changeParaBtn">Change Paragraph</button>
+      <button class="btn" id="startBtn">Start Test</button>
+      <!-- <button class="btn" id="endBtn" onclick="endTest()">End Test</button> -->
+      <button class="btn" id="restartBtn" style="display:none;">Restart Test</button> <!-- Added restart button -->
+    </div>
+
+
+    <script src="./script.js"></script>
+  </main>
+
+</body>
+</html>
