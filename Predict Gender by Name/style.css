@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  width: 50vw;
+  height: 70vh;
+  background-color: whitesmoke;
+  /* background: linear-gradient(to bottom, #ffecd2, #fcb69f); */
+  border-radius: 10px;
+  box-shadow: 2px 3px 15px gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 10px;
+
+}
+
+.title{
+  font-family: arial;
+  font-size: 34px;
+  letter-spacing: -1px;
+  font-weight: normal;
+  /* font-style: italic; */
+}
+
+.result{
+  width: 80%;
+  height: 30%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: red; */
+}
+
+.male{
+  height: 50%;
+  border: 2px solid dodgerblue;
+  background-color: lightblue;
+}
+.female{
+  height: 50%;
+  border: 2px solid hotpink;
+  background-color: pink;
+}
+
+#nameInput{
+  width: 50%;
+  padding: 12px 30px;
+  font-size: 20px;
+  border: 2px solid darkviolet;
+  /* border: none; */
+  border-radius: 10px;
+}
+#nameInput:focus{
+  outline: none
+}
+#nameBtn{
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: purple;
+  color: white;
+}
+#nameBtn:hover{
+  background-color: darkviolet;
+  cursor: pointer;
+}
+
+.inputDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.innerDiv{
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 0px 30px;
+  gap: 10px;
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#innerDiv{
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#name, #gender, #probability{
+  color: red;
+}
+
+.genderIconDiv{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#genderIcon{
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+
+}
+
+#result{
+  font-family: calibri;
+  /* font-weight: bold; */
+  font-size: 24px;
+}

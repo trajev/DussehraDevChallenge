@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gender Predictor App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <h1 class="title">Predict Gender by Name</h1>
+
+    <div class="inputDiv">
+      <input type="text" id="nameInput" placeholder="Enter any name..." autocomplete="off">
+      <button id="nameBtn">Predict</button>
+    </div>
+
+    <div class="result">
+      <div id="innerDiv">
+        <div class="innerDiv">
+          <div> Name: <span id="name">John</span> </div>
+          <div> Gender: <span id="gender">Male</span> </div>
+          <div> Probability: <span id="probability">100%</span> </div>
+        </div>
+        <div class="genderIconDiv">
+          <img src="./man.png" id="genderIcon" alt="gender-icon">
+        </div>
+      </div>
+      <div id="result"> Test your gender by entering your name</div>
+    </div>
+
+  </main>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
