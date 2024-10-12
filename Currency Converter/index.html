@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter App</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <h1 class="title">Currency Converter</h1>
+
+  <main>
+
+    <div class="currencyCountries">
+
+      <div class="names">
+        <div>From</div>
+        <div>To</div>
+      </div>
+
+      <div class="converterDiv">
+        <div class="currencyDiv">
+          <img src="" alt="flag" class="flag" id="fromFlag">
+          <select class="selectCurrency" id="fromCurrency"></select>
+        </div>
+        <div class="changeBtn" id="changeBtn"> <i class="ri-arrow-left-right-line"></i> </div>
+        <div class="currencyDiv">
+          <img src="" alt="flag" class="flag" id="toFlag">
+          <select class="selectCurrency" id="toCurrency"></select>
+        </div>
+      </div>
+
+    </div>
+
+    <input type="number" class="inputCurrency" id="inputCurrency" placeholder="Enter Value...">
+
+
+    <button id="convertBtn">Convert</button>
+
+    <h3 id="result">1 USD = 1 INR</h3>
+
+  </main>
+
+
+  <script src="./country.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
