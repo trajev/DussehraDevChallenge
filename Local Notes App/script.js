@@ -14,12 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
     clearWarning();
   });
 
+
+
+
+
+
+
+
+
   document.querySelector("#saveBtn").addEventListener("click", () => {
     let title = document.querySelector("#addNoteTitle").value;
     let description = document.querySelector("#addNoteDescription").value;
     let id = document.querySelector("#saveBtn").getAttribute("data-id");
 
-    if (title.length === 0 || title.length > 20) {
+    if (title.length === 0 || title.length > 50) {
       document.querySelector("#titleWarn").style.display = "block";
       return;
     } else {
@@ -52,11 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
     showNotes();
     document.querySelector('.newNoteDiv').classList.remove('show');
   });
+
+
+
+
+
 });
+
+
+
+
 
 function clearWarning() {
   document.querySelector("#titleWarn").style.display = "none";
 }
+
+
 
 
 function showNotes() {
