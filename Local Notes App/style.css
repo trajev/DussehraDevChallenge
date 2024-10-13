@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ddd6f3, #faaca8);
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+  font-family: "Patrick Hand", cursive;
+  font-size: 42px;
+}
+
+main {
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 3px solid hotpink;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+#addNoteBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  background-image: linear-gradient( 135deg, #FF96F9 10%, #C32BAC 100%);
+  color: white;
+  box-shadow: 2px 2px 5px gray;
+  font-size: 18px;
+}
+
+.allNotesDiv {
+  width: 100%;
+  height: 80%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.allNotesTitle {
+  width: 90%;
+  text-align: left;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+.notes {
+  width: 90%;
+  height: 80%;
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.note {
+  width: 49%;
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.note:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+.noteTitle {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.noteDescription {
+  font-size: 14px;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: pink;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hotpink;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.editBtn, .deleteBtn {
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  color: darkgreen;
+}
+
+.deleteBtn:hover {
+  color: crimson;
+}
+
+/* .editBtn {
+  display: none;
+} */
+
+.newNoteDiv {
+
+  position: absolute;
+  bottom: -100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.5s ease;
+  padding: 30px;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newNoteDiv.show {
+  bottom: 0;
+}
+
+.closeBtnDiv{
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  /* background-color: red; */
+  text-align: right;
+}
+.closeBtn {
+  color: black;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+.newNoteDiv h2 {
+  width: 90%;
+  text-align: left;
+  font-weight: normal;
+  font-size: 32px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid hotpink;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+textarea {
+  height: 200px;
+  resize: none;
+}
+
+.newNoteDiv button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-image: linear-gradient( 135deg, #FF96F9 10%, #C32BAC 100%);
+  color: white;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.newNoteDiv div{
+  width: 90%;
+}
+
+.warn{
+  font-size: 10px;
+  color: red;
+  display: none;
+}
